@@ -119,9 +119,9 @@
 #define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors ------------!
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-const bool X_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. -----------------------------!
-const bool Y_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. -----------------------------!
-const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. -----------------------------!
+const bool X_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops. -----------------------------!
+const bool Y_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops. -----------------------------!
+const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops. -----------------------------!
 //#define DISABLE_MAX_ENDSTOPS
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
@@ -131,8 +131,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define E_ENABLE_ON 0 // For all extruders
 
 // Disables axis when it's not being used.
-#define DISABLE_X true
-#define DISABLE_Y true
+#define DISABLE_X false
+#define DISABLE_Y false
 #define DISABLE_Z true
 #define DISABLE_E false // For all extruders
 
@@ -147,10 +147,10 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // Sets direction of endstops when homing; 1=MAX, -1=MIN
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
+#define Z_HOME_DIR  1 // ST changed
 
-#define min_software_endstops true //If true, axis won't move to coordinates less than HOME_POS.-----------------------------!
-#define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.-----------------------------!
+#define min_software_endstops false //If true, axis won't move to coordinates less than HOME_POS.-----------------------------!
+#define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.-----------------------------!
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
 #define Z_MAX_LENGTH 135
