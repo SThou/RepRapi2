@@ -156,9 +156,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define Z_MAX_LENGTH 135
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
-#define X_HOME_POS -100 // all were 0 0 0 
+#define X_HOME_POS -105 // all were 0 0 0 
 #define Y_HOME_POS -100
-#define Z_HOME_POS 0 // -67.5
+#define Z_HOME_POS -67.5 // -67.5
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
