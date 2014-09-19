@@ -50,7 +50,7 @@
 // 6 is EPCOS 100k
 // 7 is 100k Honeywell thermistor 135-104LAG-J01
 
-#define TEMP_SENSOR_0 7
+#define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 1
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
@@ -138,7 +138,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true 
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false 
-#define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true -----------------------------!
+#define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true -----------------------------!
 #define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR false    // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
@@ -156,16 +156,16 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define Z_MAX_LENGTH 135
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
-#define X_HOME_POS 0 // all were 0 0 0 
-#define Y_HOME_POS 0
+#define X_HOME_POS 0 // -100
+#define Y_HOME_POS 0 // -100
 #define Z_HOME_POS 0 // -67.5
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min) // Z = 4*60
 
 // default settings 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,625}  // default steps per unit for NextDay 
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 2, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 
