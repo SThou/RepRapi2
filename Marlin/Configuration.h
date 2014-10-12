@@ -164,20 +164,19 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min) // Z = 4*60
 
 // default settings 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,625}  // default steps per unit for NextDay 
-<<<<<<< HEAD
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,913} // 3mm stock
+
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 5, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
 #define DEFAULT_MAX_ACCELERATION      {1000,1000, 100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
                                       // 9000, 9000, 100, 10000
 #define DEFAULT_ACCELERATION          300    // X, Y, Z and E max acceleration in mm/s^2 for printing moves // originally 3000
 #define DEFAULT_RETRACT_ACCELERATION  300  // X, Y, Z and E max acceleration in mm/s^2 for r retracts      // originally 3000
-=======
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 45}    // (mm/sec)    
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 
 #define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
->>>>>>> f75cf333dbd05fed2b1a20f0d9849a48c0bd3778
+
 
 //  
 #define DEFAULT_XYJERK                20.0    // (mm/sec)
