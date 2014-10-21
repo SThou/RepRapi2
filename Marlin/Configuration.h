@@ -50,7 +50,7 @@
 // 6 is EPCOS 100k
 // 7 is 100k Honeywell thermistor 135-104LAG-J01
 
-#define TEMP_SENSOR_0 7
+#define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 1
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
@@ -151,9 +151,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 #define min_software_endstops false //If true, axis won't move to coordinates less than HOME_POS.-----------------------------!
 #define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.-----------------------------!
-#define X_MAX_LENGTH 200
-#define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 135
+#define X_MAX_LENGTH 205
+#define Y_MAX_LENGTH 205
+#define Z_MAX_LENGTH 100
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
 #define X_HOME_POS 0 // all were 0 0 0 
