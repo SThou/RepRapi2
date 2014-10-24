@@ -1,6 +1,6 @@
 #ifndef __CONFIGURATION_H
 #define __CONFIGURATION_H
-
+//Working 5:00PM 9/27s
 // This configurtion file contains the basic settings.
 // Advanced settings can be found in Configuration_adv.h 
 // BASIC SETTINGS: select your board type, temperature sensor type, axis scaling, and endstop configuration
@@ -133,47 +133,49 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // Disables axis when it's not being used.
 #define DISABLE_X false
 #define DISABLE_Y false
-#define DISABLE_Z true // allows for movement in both direction for testing 
+#define DISABLE_Z false // allows for movement in both direction for testing 
 #define DISABLE_E false // For all extruders
 
-#define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true 
+#define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true 
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false 
-#define INVERT_Z_DIR false     // for Mendel set to false, for Orca set to true -----------------------------!
+#define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true -----------------------------!
 #define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR false    // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 
 // ENDSTOP SETTINGS:
 // Sets direction of endstops when homing; 1=MAX, -1=MIN
-#define X_HOME_DIR  1 // Endstop at left (+x)
+#define X_HOME_DIR  -1 // Endstop at left (+x)
 #define Y_HOME_DIR -1 // Endstop at rear (-y)
-#define Z_HOME_DIR -1 // Endstop at bottom (-z)
+#define Z_HOME_DIR  -1 // Endstop at bottom (-z) // working originally -1 9/18
 
 #define min_software_endstops false //If true, axis won't move to coordinates less than HOME_POS.-----------------------------!
-#define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.-----------------------------!
-#define X_MAX_LENGTH 205
-#define Y_MAX_LENGTH 205
+#define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.-----------------------------! * should be true ST
+#define X_MAX_LENGTH 200
+#define Y_MAX_LENGTH 200
 #define Z_MAX_LENGTH 100
 
 // The position of the homing switches. Use MAX_LENGTH * -0.5 if the center should be 0, 0, 0
-#define X_HOME_POS 0 // all were 0 0 0 
-#define Y_HOME_POS 0
+#define X_HOME_POS 0 // -100
+#define Y_HOME_POS 0 // -100
 #define Z_HOME_POS 0 // -67.5
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {50*60, 50*60, 4*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min) // Z = 4*60
 
 // default settings 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,625}  // default steps per unit for NextDay 
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 45}    // (mm/sec)    
-#define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,625} // 3mm stock 913
 
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 
-#define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 5, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
+#define DEFAULT_MAX_ACCELERATION      {1000,1000, 100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+                                      // 9000, 9000, 100, 10000
+#define DEFAULT_ACCELERATION          300    // X, Y, Z and E max acceleration in mm/s^2 for printing moves // originally 3000
+#define DEFAULT_RETRACT_ACCELERATION  300  // X, Y, Z and E max acceleration in mm/s^2 for r retracts      // originally 3000   
 
-// 
+
+//  
 #define DEFAULT_XYJERK                20.0    // (mm/sec)
-#define DEFAULT_ZJERK                 0.4     // (mm/sec)
+#define DEFAULT_ZJERK                 0.2     // (mm/sec)
 #define DEFAULT_EJERK                 5.0    // (mm/sec)
 
 //===========================================================================
