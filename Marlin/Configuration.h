@@ -1,8 +1,6 @@
 #ifndef __CONFIGURATION_H
 #define __CONFIGURATION_H
-
-//Working 5:00PM 9/27sxDC
-
+//Working 5:00PM 9/27s
 // This configurtion file contains the basic settings.
 // Advanced settings can be found in Configuration_adv.h 
 // BASIC SETTINGS: select your board type, temperature sensor type, axis scaling, and endstop configuration
