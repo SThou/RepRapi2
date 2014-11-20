@@ -164,7 +164,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min) // Z = 4*60
 
 // default settings 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,625} // 3mm stock 913
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,781} // 3mm stock 913
+                                                                // Initial calibrated 30mm 1.75mm True Blue Makerbot Filament 781
+
 
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 5, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
 #define DEFAULT_MAX_ACCELERATION      {1000,1000, 100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
