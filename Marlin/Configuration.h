@@ -1,8 +1,6 @@
 #ifndef __CONFIGURATION_H
 #define __CONFIGURATION_H
-//Working Test 1:04 PM ST
-// This configurtion file contains the basic settings.
-// Advanced settings can be found in Configuration_adv.h 
+//Working Enable SD and LCD 3:47 PM ST 12/11/2014
 // BASIC SETTINGS: select your board type, temperature sensor type, axis scaling, and endstop configuration
 
 //User specified version info of THIS file to display in [Pronterface, etc] terminal window during startup.
@@ -12,7 +10,6 @@
 #define STRING_CONFIG_H_AUTHOR "NDRR with Thanks to Erik" //Who made the changes.
 
 // This determines the communication speed of the printer
-//#define BAUDRATE 250000
 #define BAUDRATE 115200
 
 //// The following define selects which electronics board you have. Please choose the one that matches your setup
@@ -166,6 +163,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // default settings 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {53.2,53.2,3200/1.25,781} // 3mm stock 913
                                                                 // Initial calibrated 30mm 1.75mm True Blue Makerbot Filament 781
+                                                                
 
 
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 5, 45}    // (mm/sec)   // ST originally 500, 500, 5, 45 at 500 nothing short burst
@@ -197,10 +195,10 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 //LCD and SD support
 //#define ULTRA_LCD  //general lcd support, also 16x2
-//#define SDSUPPORT // Enable SD Card Support in Hardware Console
+//#define SDSUPPORT// Enable SD Card Support in Hardware Console
 
 //#define ULTIMAKERCONTROLLER //as available from the ultimaker online store.
-//#define ULTIPANEL  //the ultipanel as on thingiverse
+#define ULTIPANEL  //the ultipanel as on thingiverse
 
 
 #ifdef ULTIMAKERCONTROLLER    //automatic expansion
@@ -210,11 +208,11 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
  
 
 #ifdef ULTIPANEL
-//  #define NEWPANEL  //enable this if you have a click-encoder panel
+  #define NEWPANEL  //enable this if you have a click-encoder panel
   #define SDSUPPORT
   #define ULTRA_LCD
-  #define LCD_WIDTH 20
-  #define LCD_HEIGHT 4
+  #define LCD_WIDTH 16
+  #define LCD_HEIGHT 2
   
 // Preheat Constants
   #define PLA_PREHEAT_HOTEND_TEMP 180 
